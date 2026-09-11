@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #080D12;
+  color: #E4E8EB;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Minimal Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080D12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(190, 205, 215, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(190, 205, 215, 0.28);
+}
+
+/* Premium Dark Operations Cards */
+.glass-panel {
+  background: #101820;
+  border: 1px solid rgba(190, 205, 215, 0.10);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: all 180ms ease;
+}
+
+.glass-panel-interactive {
+  background: #101820;
+  border: 1px solid rgba(190, 205, 215, 0.10);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: all 180ms ease;
+}
+
+.glass-panel-interactive:hover {
+  background: #121B23;
+  border-color: rgba(190, 205, 215, 0.22);
+  transform: translateY(-1px);
+}
+
+/* Page Transition Container */
+.page-fade {
+  animation: fadeIn 220ms ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base Form Control Reset */
+input, select, textarea, button {
+  transition: all 180ms ease;
+}
